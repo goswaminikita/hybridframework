@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.Amazon.testcases.AmazonTodaysDealLinkTest"/>
+      <class name="com.Amazon.testcases.AmazonProductAddToCartTest"/>
+      <class name="com.Amazon.testcases.ExecutionClassOfAllTestClasses"/>
+      <class name="com.Amazon.testcases.AmazonHomePageTest"/>
+      <class name="com.Amazon.testcases.AmazonSignInPageTest"/>
+      <class name="com.Amazon.testcases.CartPageTest"/>
+      <class name="com.Amazon.testcases.ProductDetailOnCartTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
