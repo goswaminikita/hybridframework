@@ -253,7 +253,13 @@ public static void radioButton(String locatorType,String locatorValue)
 	PomConstantClass.element=getWebElement(locatorType, locatorValue);
 	
 }
+/*
 	
+public static void PageLoadTimeOut()
+	{
+		PomConstantClas
+	}
+	*/
 }
 
 

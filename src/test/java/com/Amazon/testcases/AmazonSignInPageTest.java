@@ -2,6 +2,8 @@ package com.Amazon.testcases;
 
 import org.apache.log4j.Logger;
 
+
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,6 +15,9 @@ import com.Keyword_Base.TestBaseClass;
 import com.POM.pages.AmazonSignInPage;
 import com.POM.pages.AmazonSignInPage2;
 import com.POM.pages.HomePageOfAmazon;
+
+import customeExceptions.UserNamePassIncorrectException;
+
 
 public class AmazonSignInPageTest extends TestBaseClass {
 	public AmazonSignInPage SignIn1st;
@@ -54,13 +59,14 @@ public void setUp()
 	Assert.assertTrue(flag);
 	}
 	@Test(priority=3)
-	public void SignInTest()
+	public void SignInTest() throws UserNamePassIncorrectException
 	{
 		log.info("Sign in test method is start");
 		Signin2nd=AmazonSignInPage.signIn(PomConstantClass.prop.getProperty("username"));
 		log.info("enter username of customer");
 		homePage=Signin2nd.enterPasswordText(PomConstantClass.prop.getProperty("password"));
 		log.info("enter password of customer to signin customer correctly");
+		//throw new UserNamePassIncorrectException();
 		
 	
 	}
